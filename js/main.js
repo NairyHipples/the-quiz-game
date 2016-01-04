@@ -38,6 +38,8 @@ function printQuestion(){
   //Fetching the area the text is going to be printed to
   quizArea = document.getElementById("quizArea");
 
+  //Printing out the current roundCounter, showing which out of all we're on right now.
+  document.getElementById("quizQuestionText").innerHTML = "Question "+(roundCounter+1)+" of "+questions.length;
   //roundCounter is saying 0 at the start of the game.
   //0 in this case means the first question in my "questions array"
   question = questions[roundCounter][0];
