@@ -42,6 +42,13 @@ function printQuestion(){
   //0 in this case means the first question in my "questions array"
   question = questions[roundCounter][0];
 
+  //Giving choiceA the second value of the "questions"-array.
+  choiceA = questions[roundCounter][1];
+  //Giving choiceB the third value of the "questions"-array.
+  choiceB = questions[roundCounter][2];
+  //Giving choiceC the fourth value of the "questions"-array.
+  choiceC = questions[roundCounter][3];
+
   //Printing out the quiz question to the quizArea div
   quizArea.innerHTML = "<h3>"+question+"</h3>";
   //Adding radio buttons to the quizArea div.
