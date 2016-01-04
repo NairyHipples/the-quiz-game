@@ -24,3 +24,16 @@ var questions = [
   [ "What is 1 + 1?", "0", "1", "2", "B" ]
  //Filler questions to begin with. there are 9 in total.
 ];
+
+//A function used to print the question to the page.
+function printQuestion(){
+}
+
+//A function to check and store the users answer.
+function checkAnswer(){
+}
+
+//A function that should be activated when the user presses the restart button.
+function pageReload() {
+  window.location.reload();
+}
