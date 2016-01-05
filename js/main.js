@@ -72,11 +72,24 @@ function printQuestion(){
   quizArea.innerHTML += "<input type='radio' name='choices' value='A'> "+choiceA+"<br>";
   quizArea.innerHTML += "<input type='radio' name='choices' value='B'> "+choiceB+"<br>";
   quizArea.innerHTML += "<input type='radio' name='choices' value='C'> "+choiceC+"<br><br>";
-  //I'm creating an onclick to trigger the 'checkAnswer()' function below.
-  quizArea.innerHTML += "<button class='btn btn-lg btn-primary' onclick='checkAnswer()'>Submit Answer</button>";
+  //I'm creating an onclick to trigger the 'checkChecked()' function below.
+  quizArea.innerHTML += "<button class='btn btn-lg btn-primary' onclick='checkChecked()'>Submit Answer</button>";
 
 }
 
+//Function to see if a radiobutton is selected or not
+function checkChecked(){
+  choices = document.getElementsByName("choices");
+
+  //Loop through every item in the choices array,
+  for(var i = 0; i < choices.length; i+=1){
+    //You can only get in here if a radio button is selected
+    if(choices[i].checked){
+      //if checked call the checkAnswer function
+      checkAnswer();
+    }
+  }
+}
 //A function to check and store the users answer.
 function checkAnswer(){
   //Using the variable i declared in the beginning
