@@ -21,7 +21,7 @@ var correct = 0;
 //Here are the questions for the quiz. I'm using multi dimentional arrays for this.
 //I'm storing the answer last - in the same array as the question and the different choices
 var questions = [
-  [ "If there are 6 apples and you take away 4, how many do you have? ", "4", "6", "2", "A" ],
+  [ "If there are 6 apples and you take away 4, how many do you have?", "4", "6", "2", "A" ],
   [ "Before Mt. Everest was discovered, what was the highest mountain in the world?", "Mt. K2", "Mt. Mckinley", "Mt. Everest", "C" ],
   [ "Adam's mother had three children. The first child was named April. The second child was named May. What was the third child's name?", "Adam", "March", "June", "A" ],
   [ "If it took eight men: ten hours to build a wall, how long would it take four men to build it?", "5 hours", "15 hours", "None of the above", "C" ],
