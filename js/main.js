@@ -34,6 +34,25 @@ function printQuestion(){
   //Fetching the area the text is going to be printed to
   quizArea = document.getElementById("quizArea");
 
+  //Quiz ended with 6 of 5 questions, adding conditional statement to solve the problem.
+  //Check if we are above or at the last question
+  if(roundCounter >= questions.length){
+    //Displays how many questions the user got correct out of the total amounts of questions.
+    quizArea.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct</h2>";
+    //If the quiz is over, change our h2 "quizQuestionText" to "Quiz Completed"
+    document.getElementById("quizQuestionText").innerHTML = "Quiz Completed";
+    //If the quiz is over, add the Restart Quiz button, and that triggers our pageReload() function when pressed.
+    quizArea.innerHTML += "<button onclick='pageReload()'>Restart Quiz</button>";
+
+    //If the user wants to restart, set the roundCounter to 0 to load the first question
+    roundCounter = 0;
+    //And also set the score back to zero.
+    correct = 0;
+
+    //To prevent the printQuestion() function to run further if this if statement is true
+    return false;
+  }
+
   //Printing out the current roundCounter, showing which out of all we're on right now.
   document.getElementById("quizQuestionText").innerHTML = "Question "+(roundCounter+1)+" of "+questions.length;
   //roundCounter is saying 0 at the start of the game.
