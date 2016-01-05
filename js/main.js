@@ -38,11 +38,11 @@ function printQuestion(){
   //Check if we are above or at the last question
   if(roundCounter >= questions.length){
     //Displays how many questions the user got correct out of the total amounts of questions.
-    quizArea.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct</h2>";
+    quizArea.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions right.</h2>";
     //If the quiz is over, change our h2 "quizQuestionText" to "Quiz Completed"
-    document.getElementById("quizQuestionText").innerHTML = "Quiz Completed";
+    document.getElementById("quizQuestionText").innerHTML = "Quiz Completed!";
     //If the quiz is over, add the Restart Quiz button, and that triggers our pageReload() function when pressed.
-    quizArea.innerHTML += "<button onclick='pageReload()'>Restart Quiz</button>";
+    quizArea.innerHTML += "<button class='btn btn-success btn-lg' onclick='pageReload()'>Restart Quiz</button>";
 
     //If the user wants to restart, set the roundCounter to 0 to load the first question
     roundCounter = 0;
@@ -73,7 +73,7 @@ function printQuestion(){
   quizArea.innerHTML += "<input type='radio' name='choices' value='B'> "+choiceB+"<br>";
   quizArea.innerHTML += "<input type='radio' name='choices' value='C'> "+choiceC+"<br><br>";
   //I'm creating an onclick to trigger the 'checkAnswer()' function below.
-  quizArea.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
+  quizArea.innerHTML += "<button class='btn btn-lg btn-primary' onclick='checkAnswer()'>Submit Answer</button>";
 
 }
 
@@ -108,5 +108,10 @@ function pageReload() {
   window.location.reload();
 }
 
+$('#startButton').click(function(){
+  printQuestion();
+});
+
+
 //Added a listener to wait until all items had loaded before we start the quiz.
-window.addEventListener("load", printQuestion, false);
+window.addEventListener("load", startGame, false);
