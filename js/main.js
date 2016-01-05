@@ -24,8 +24,13 @@ var questions = [
   [ "If there are 6 apples and you take away 4, how many do you have?", "4", "6", "2", "A" ],
   [ "Before Mt. Everest was discovered, what was the highest mountain in the world?", "Mt. K2", "Mt. Mckinley", "Mt. Everest", "C" ],
   [ "Adam's mother had three children. The first child was named April. The second child was named May. What was the third child's name?", "Adam", "March", "June", "A" ],
-  [ "If it took eight men: ten hours to build a wall, how long would it take four men to build it?", "5 hours", "15 hours", "None of the above", "C" ],
-  [ "How can a man go eight days without sleep?", "By drinking RedBull", "By sleeping during the night time", "By never going to sleep", "B" ]
+  [ "If it took eight men: ten hours to build a wall, how long would it take four men to build that wall?", "5 hours", "15 hours", "0 hours", "C" ],
+  [ "How can a man go eight days without sleep?", "By drinking RedBull", "By sleeping during the night time", "By never going to sleep", "B" ],
+  [ "If you are given 3 pills by a doctor and you're told to take one every 30 minutes. How long would it be until you had no pills left?", "1 hour", "1 hour 30 minutes", "30 minutes", "A" ],
+  [ "2 year old Jennifer has a sister that is half her age. How old is Jennifer's sister when she is 100 years old?", "100 years old", "50 years old", "99 years old", "A" ],
+  [ "Imagine you are driving a bus. You drive to bus stop 'T', where 4 people get on. You then arrive at bus stop 'O', where 2 people get off. Finally, you reach bus stop 'M', where everyone gets off. What is the name of the bus driver? (The answer is within the question)", "The bus driver has your name", "The bus driver's name is: GARY", "The bus driver's name is: TOM", "A" ],
+  [ "A blind beggar had a brother who died. What relation did the blind beggar have to the brother who died? 'Brother' is not the answer.", "Cousin", "Sister", "No relation, becuase the brother died", "B" ],
+  [ "A taxi driver is going down a one-way street the wrong way, whilst texting his wife and paying no attention to the road. However, he is doing nothing illegal. Why?", "He isn't driving", "He has stopped the car to text his wife", "He is reversing his car", "A" ]
 
 ];
 
