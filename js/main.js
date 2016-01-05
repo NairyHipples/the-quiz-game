@@ -64,7 +64,28 @@ function printQuestion(){
 
 //A function to check and store the users answer.
 function checkAnswer(){
-  //Do something
+  //Using the variable i declared in the beginning
+  //to group up the radio buttons name. getElementsByName returns an array of the items with the same name.
+  choices = document.getElementsByName("choices");
+  //For loop to loop through the different radio buttons
+  for(var i = 0; i < choices.length; i += 1){
+    //Find the radio button that is checked
+    if(choices[i].checked){
+      //take the value of of the checked button and store it in the choice variable I declared in the beginning.
+      choice = choices[i].value;
+    }
+  }
+  //if the value of the checked button equals to the value in the "questions"-array; which is the "answer" to the question
+  if(choice == questions[roundCounter][4]){
+    //then add one to the correct answered questions.
+    correct += 1;
+  }
+  //add one to the roundCounter at the end of the function
+  roundCounter += 1;
+  //call the printQuestion function at the end to start over the 'printQuestion' process
+  //from the beginning, so that we now cycle through the second question
+  //(with our roundCounter now holding the value of = +1 compared to the previous value).
+  printQuestion();
 }
 
 //A function that should be activated when the user presses the restart button.
