@@ -108,10 +108,10 @@ function pageReload() {
   window.location.reload();
 }
 
+//Adding a start button to not call the 'printQuestion()' function in the beginning
 $('#startButton').click(function(){
   printQuestion();
 });
 
-
 //Added a listener to wait until all items had loaded before we start the quiz.
-window.addEventListener("load", startGame, false);
+window.addEventListener("load", '', false);
